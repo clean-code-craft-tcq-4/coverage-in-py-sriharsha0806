@@ -15,7 +15,7 @@ def classify_temperature_breach(coolingType, temperatureInC):
 def def_value():
     return "Not Present"
 
-def check_and_alert(alertTarget, batteryChar, temperatureInce):
+def check_and_alert(alertTarget, batteryChar, temperatureInc):
     breachType = classify_temperateure_breach(batteryChar['CoolingType'], temperatureInc)
     d = defaultdict(def_value)
     d["TO_CONTROLLER"] = send_to_controller(breachType)
