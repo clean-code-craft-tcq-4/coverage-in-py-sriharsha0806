@@ -10,7 +10,7 @@ def infer_breach(value, lowerLimit, upperLimit):
 def classify_temperature_breach(coolingType, temperatureInC):
     coolingTypes = ['PASSIVE_COOLING', 'HI_ACTIVE_COOLING', 'MED_ACTIVE_COOLING']
     upperLimit = [35, 45, 40]
-    return infer_breach(temperatureInc, 0, upperLimit[coolingTypes.index(coolingType)]) if coolingType in CoolingTypes elseinfer_breach(temperatureInc, 0, 0)
+    return infer_breach(temperatureInc, 0, upperLimit[coolingTypes.index(coolingType)]) if coolingType in CoolingTypes else infer_breach(temperatureInc, 0, 0)
 
 def def_value():
     return "Not Present"
