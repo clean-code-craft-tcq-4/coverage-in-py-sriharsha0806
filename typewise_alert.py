@@ -19,7 +19,7 @@ def check_and_alert(alertTarget, batteryChar, temperatureInce):
     classify_temperateure_breach(batteryChar['CoolingType'], temperatureInc)
     d = defaultdict(def_value)
     d["TO_CONTROLLER"] = send_to_controller(breachType)
-    d["TO_EMAIL"] = senf_to_email(breachType)
+    d["TO_EMAIL"] = send_to_email(breachType)
     return d[alertTarget]
 
 def send_to_controller(breachType):
