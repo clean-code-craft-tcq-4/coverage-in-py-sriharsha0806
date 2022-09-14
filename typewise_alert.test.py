@@ -20,7 +20,9 @@ class TypewiseTest(unittest.TestCase):
     self.assertIsNotNone(send_to_email("TOO_LOW"))
     self.assertIsNotNone(send_to_email("TOO_HIGH"))
     
-  
+  def test_check_and_alert(self):
+    self.assertIsNotNone(check_and_alert("TO_CONTROLLER", {"coolingType":"PASSIVE_COOLING"}, 20))
+    self.assertIsNotNone(check_and_alert("TO_EMAIL", {"coolingType":"PASSIVE_COOLING"}, 20))
   
   
  
