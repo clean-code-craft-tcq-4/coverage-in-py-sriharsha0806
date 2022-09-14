@@ -13,12 +13,7 @@ class TypewiseTest(unittest.TestCase):
     self.assertTrue(classify_temperature_breach("HI_ACTIVE_COOLING", -1) == "TOO_LOW")
     self.assertTrue(classify_temperature_breach("MED_ACTIVE_COOLING", 50) == "TOO_HIGH")
   
-  def test_send_to_controller(self):
-    self.assertionIsNone(send_to_controller("TOO_LOW"))
-    
-  def test_send_to_email(self):
-    self.assertIsNone(send_to_email("TOO_LOW"))
-    self.assertIsNone(send_to_email("TOO_HIGH"))
+  
     
   
 
