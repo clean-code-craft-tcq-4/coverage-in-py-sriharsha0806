@@ -17,8 +17,8 @@ class TypewiseTest(unittest.TestCase):
     self.assertIsNone(send_to_controller("TOO_LOW"))
     
   def test_send_to_email(self):
-    self.assertIsNone(send_to_email("TOO_LOW"))
-    self.assertIsNone(send_to_email("TOO_HIGH"))
+    self.assertIsNotNone(send_to_email("TOO_LOW"))
+    self.assertIsNotNone(send_to_email("TOO_HIGH"))
     
   
   
