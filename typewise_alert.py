@@ -8,13 +8,11 @@ def infer_breach(value, lowerLimit, upperLimit):
 def classify_temperature_breach(coolingType, temperatureInC):
     l = [35, 40, 45]
     coolingTypes = ['PASSIVE_COOLING', 'MED_ACTIVE_COOLING', 'HI_ACTIVE_COOLING']
-    if temperatureInC in range(l[-1]+1):
-        lowerlimit = 0
-        index = coolingTypes.index(coolingType)
-        upperlimit = l[index]
-        return infer_breach(temperatureInC, lowerlimit, upperlimit)
-    else:
-        raise ValueError("Temperature is not within range")
+    lowerlimit = 0
+    index = coolingTypes.index(coolingType)
+    upperlimit = l[index]
+    return infer_breach(temperatureInC, lowerlimit, upperlimit)
+    
 
 def check_and_alert(alertTarget, batteryChar, temperatureInC):
   breachType =\
