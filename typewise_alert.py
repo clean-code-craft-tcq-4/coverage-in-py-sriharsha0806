@@ -12,7 +12,7 @@ def classify_temperature_breach(coolingType, temperatureInC):
         lowerlimit = 0
         index = coolingTypes.index(coolingType)
         upperlimit = l[index]
-        return infer_breach(temperatureInc, lowerlimit, upperlimit)
+        return infer_breach(temperatureInC, lowerlimit, upperlimit)
     else:
         raise ValueError("Temperature is not within range")
 
